@@ -44,11 +44,11 @@ export default class InputToolbar extends React.Component {
       position: 'absolute'
     });
   }
-  
+
   renderActions() {
     if (this.props.renderActions) {
       return this.props.renderActions(this.props);
-    } else if (this.props.onPressActionButton) {
+    } else if (this.props.onPressActionButton || this.props.options) {
       return <Actions {...this.props} />;
     }
     return null;
